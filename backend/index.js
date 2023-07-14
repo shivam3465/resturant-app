@@ -20,17 +20,9 @@ app.use(
     credentials: true,
   })
 );
-app.use(express.static(path.join(__dirname,'../frontend/dist')))
+
 app.use("/api/v1/tables", require("./routes/reserveTable"));
 app.use("/api/v1/orders", require("./routes/order"));
-
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"), function (err) {
-    if (err) {
-      res.status(500).send(err);
-    }
-  });
-});
 
 app.listen(PORT, () => {
   console.log("listening on port " + PORT);
