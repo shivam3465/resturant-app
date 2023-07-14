@@ -5,8 +5,7 @@ require("dotenv").config({path:"./config.env"});
 const path = require("path");
 const app = express();
 const PORT = 4000;
-const databaseUri="mongodb://localhost:27017/fleksa"
-connectToDatabase(`${databaseUri}`);
+connectToDatabase(process.env.URI);
 
 app.use(express.json());
 
