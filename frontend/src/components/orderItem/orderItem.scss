@@ -1,0 +1,29 @@
+.Order-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.39);
+    .main{
+        position: relative;
+        svg{
+            color: white;
+            position: absolute;
+            top: 0.6rem;
+            right: 0.6rem;
+            font-size: 2rem;
+            cursor: pointer;
+            &:active{
+                transform: scale(0.94);
+            }
+        }
+    }
+    .item{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        >span{
+            margin-bottom: 1rem;            
+        }
+    }
+}

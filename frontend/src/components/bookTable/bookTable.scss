@@ -1,0 +1,76 @@
+.book {
+  .main {
+    width: 35rem;
+    margin-top: 1rem;
+    .slot {
+      // border: 1px solid white;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      width: inherit;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      .item {
+        // width: 6.4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgb(135, 135, 135);
+        background-color: rgb(40, 40, 40);
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+      .selected {
+        background-color: rgb(15, 134, 15);
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px){
+   .book{
+    .main{
+        width: 80%;
+        min-height: 80vh;
+        .input{
+            label,div{
+                font-size: 1.5rem;
+            }
+          input,select{
+              font-size: 2rem;
+          }
+        }
+        .slot{
+          .item{
+              font-size: 1.3rem;
+          }
+        }
+        .btn{
+            font-size: 1.7rem;
+        }
+    }
+   } 
+}
+
+@media screen and (max-width: 600px) {
+  .book {
+    .main {
+      width: 98%;
+      min-height: 80vh;
+      .input{
+        select{
+            font-size: 2rem;
+        }
+      }
+      .slot{
+        .item{
+            font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
