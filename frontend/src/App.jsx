@@ -8,7 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const baseUrl="http://127.0.0.1:4000/api/v1"
+export const baseUrl="https://resturant-app-tau.vercel.app/api/v1"
 
 function App() {  
 
